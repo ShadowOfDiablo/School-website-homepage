@@ -183,6 +183,78 @@ nav .navigation ul li a:hover{
   padding: 15px;
 }
 
+/* Skills Table Section */
+#умения {
+  padding: 8vw 8vw;
+  text-align: center;
+}
+
+#умения .table-container {
+  overflow-x: auto; /* Осигурява скрол на малки екрани */
+}
+
+#умения table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  border: 1px solid #ddd; /* Външна рамка за цялата таблица */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#умения table thead {
+  background-color: #101C32; /* Тъмно синьо от твоя footer */
+  color: rgb(241, 240, 245);
+}
+
+#умения table th,
+#умения table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#умения table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Стил за името на специалността в основната таблица */
+#умения > .table-container > table > tbody > tr > td:first-child {
+  font-weight: 600;
+  color: rgb(35, 35, 85);
+  font-size: 1.1rem;
+  width: 30%;
+}
+
+/* Стилизиране на вложената таблица (под-таблицата) */
+#умения .nested-table {
+  width: 100%;
+  border: none; /* Премахваме рамките на вложената таблица */
+  margin-top: 0;
+  box-shadow: none;
+}
+
+#умения .nested-table tr {
+  background-color: transparent !important; /* Гарантира, че няма оцветяване на редовете */
+}
+
+#умения .nested-table td {
+  border: none; /* Премахваме рамките на клетките */
+  padding: 6px 0; /* По-малко отстояние */
+  font-size: 0.95rem;
+  color: #555;
+  vertical-align: middle;
+}
+
+/* Икони за уменията */
+#умения .nested-table td i {
+  margin-right: 10px;
+  color: #2a9d8f; /* Приятен зелен/тюркоазен цвят */
+  font-size: 1rem;
+}
+
 /* teachers */
 #учители {
   padding: 8vw 8vw 0 8vw;
