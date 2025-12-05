@@ -39,6 +39,7 @@ nav{
   align-items: center;
   padding: 1vw 8vw;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000; /* Added z-index to ensure nav stays on top */
 }
 /* Logo size */
 nav img{
@@ -65,7 +66,7 @@ nav .navigation ul li a{
 nav .navigation ul li a:hover{
   color: #FDC93B;
 }
-/* Главна страница, абе не точно */
+/* Home Section */
 #home{
   background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),
   url("popovImages/forLater.jpg");
@@ -120,7 +121,7 @@ nav .navigation ul li a:hover{
   color: rgb(21, 21, 100);
   background: #fff;
 }
-/* features */
+/* Features */
 #features{
   padding: 5vw 8vw 0 8vw;
   text-align: center;
@@ -151,131 +152,131 @@ nav .navigation ul li a:hover{
   font-weight: 400;
   color: rgb(70, 70, 87);
 }
-/* course */
-#Специалности {
+/* Specialties */
+#specialties {
   padding: 8vw 8vw 0 8vw;
   text-align: center;
 }
-#Специалности h1 {
-  font-size: 1.5rem; /* Adjust as needed */
-  margin-bottom: 20px; /* Add some spacing */
+#specialties h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-#Специалности .curriculum {
+#specialties .curriculum {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns in each row */
-  grid-gap: 20px; /* Increased gap between rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   margin-top: 50px;
-  justify-items: center; /* Center items horizontally */
+  justify-items: center;
 }
-#Специалности .специалност {
+#specialties .specialty-card {
   text-align: start;
   background-color: #F9F9FF;
   height: 100%;
-  width: 360px; /* Increased width */
+  width: 360px;
 }
-#Специалности .curriculum img {
+#specialties .curriculum img {
   width: 100%;
   height: 60%;
   background-size: cover;
   background-position: center;
 }
-#Специалности .curriculum .details {
+#specialties .curriculum .details {
   padding: 15px;
 }
 
-/* Skills Table Section */
-#умения {
+/* Skills Table */
+#skills {
   padding: 8vw 8vw;
   text-align: center;
 }
 
-#умения .table-container {
-  overflow-x: auto; /* Осигурява скрол на малки екрани */
+#skills .table-container {
+  overflow-x: auto;
 }
 
-#умения table {
+#skills table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
-  border: 1px solid #ddd; /* Външна рамка за цялата таблица */
+  border: 1px solid #ddd;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-#умения table thead {
-  background-color: #101C32; /* Тъмно синьо от твоя footer */
+#skills table thead {
+  background-color: #101C32;
   color: rgb(241, 240, 245);
 }
 
-#умения table th,
-#умения table td {
+#skills table th,
+#skills table td {
   border: 1px solid #ddd;
   padding: 12px 15px;
   text-align: left;
   vertical-align: top;
 }
 
-#умения table th {
+#skills table th {
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 600;
 }
 
-/* Стил за името на специалността в основната таблица */
-#умения > .table-container > table > tbody > tr > td:first-child {
+/* Style for the first column */
+#skills > .table-container > table > tbody > tr > td:first-child {
   font-weight: 600;
   color: rgb(35, 35, 85);
   font-size: 1.1rem;
   width: 30%;
 }
 
-/* Стилизиране на вложената таблица (под-таблицата) */
-#умения .nested-table {
+/* Nested Table Styles */
+#skills .nested-table {
   width: 100%;
-  border: none; /* Премахваме рамките на вложената таблица */
+  border: none;
   margin-top: 0;
   box-shadow: none;
 }
 
-#умения .nested-table tr {
-  background-color: transparent !important; /* Гарантира, че няма оцветяване на редовете */
+#skills .nested-table tr {
+  background-color: transparent !important;
 }
 
-#умения .nested-table td {
-  border: none; /* Премахваме рамките на клетките */
-  padding: 6px 0; /* По-малко отстояние */
+#skills .nested-table td {
+  border: none;
+  padding: 6px 0;
   font-size: 0.95rem;
   color: #555;
   vertical-align: middle;
 }
 
-/* Икони за уменията */
-#умения .nested-table td i {
+/* Icons */
+#skills .nested-table td i {
   margin-right: 10px;
-  color: #2a9d8f; /* Приятен зелен/тюркоазен цвят */
+  color: #2a9d8f;
   font-size: 1rem;
 }
 
-/* teachers */
-#учители {
+/* Teachers */
+#experts {
   padding: 8vw 8vw 0 8vw;
   text-align: center;
 }
 
-#учители .teacher-box {
+#experts .teacher-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
   margin-top: 50px;
 }
 
-#учители .teacher-box .profiles {
+#experts .teacher-box .profiles {
   background: #fafaf1;
   padding: 30px 10px;
 }
 
-#учители .teacher-box .profiles img {
+#experts .teacher-box .profiles img {
   width: 100%;
-  height: 360px; /* Set the height you want, e.g., 280px */
+  height: 360px;
   background-size: cover;
   background-position: center;
 }
@@ -297,7 +298,7 @@ nav .navigation ul li a:hover{
   border: 1px solid rgb(21, 21, 100);
   cursor: pointer;
 }
-/* footer */
+/* Footer */
 footer{
   padding: 8vw;
   background-color: #101C32;
@@ -356,19 +357,4 @@ footer .subscribe a.yellow{
 footer a.yellow:hover{
   color: rgb(21, 21, 100);
   background: #fff;
-}
-/* About */
-
-/* Blog */
-
-/* Course_inner */
-
-/* contact */
-
-/* responsive */
-
-@media (max-width: 769px) {
-}
-
-@media (max-width: 475px) {
 }
